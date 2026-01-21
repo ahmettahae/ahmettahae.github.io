@@ -9,7 +9,6 @@ Sadece bir yapılacaklar listesi değil, aynı zamanda disiplin kazanmanızı sa
 ## 🚀 PROJE HAKKINDA
 
 **Geliştirici:** Ahmet Taha Erol
-**Versiyon:** 1.0.0
 
 Bu projenin temel amacı; kullanıcıların hedeflerine ulaşırken motivasyonlarını korumalarını sağlamak, ilerlemelerini somut grafiklerle göstermek ve **oyunlaştırma (gamification)** dinamikleriyle alışkanlık kazanımını kolaylaştırmaktır.
 
@@ -31,8 +30,8 @@ Bu projenin temel amacı; kullanıcıların hedeflerine ulaşırken motivasyonla
 
 Bu proje, modern web standartlarına uygun olarak, **sunucusuz (serverless)** ve **istemci taraflı (client-side)** çalışacak şekilde tasarlanmıştır.
 
-* **HTML5 & CSS3:** Semantik yapı, CSS Grid/Flexbox ile responsive (mobil uyumlu) tasarım ve CSS değişkenleri ile tema yönetimi.
-* **JavaScript (ES6+):** SPA mimarisi, DOM manipülasyonu, asenkron işlemler ve tüm algoritma yönetimi.
+* **HTML & CSS:** Semantik yapı, CSS Grid/Flexbox ile responsive (mobil uyumlu) tasarım ve CSS değişkenleri ile tema yönetimi.
+* **JavaScript:** SPA mimarisi, DOM manipülasyonu, asenkron işlemler ve tüm algoritma yönetimi.
 * **LocalStorage:** Kullanıcı profili, hedefler ve galeri görsellerinin kalıcı olarak tarayıcıda saklanması teknolojisi.
 * **Chart.js:** Veri görselleştirme kütüphanesi.
 * **JSON:** Veri modelleme ve serileştirme.
@@ -55,5 +54,3 @@ Bu proje statik bir web uygulamasıdır. Herhangi bir sunucu kurulumu, veritaban
 **Geliştirici:** Ahmet Taha Erol
 **E-posta:** ahmettahae@gmail.com
 **LinkedIn:** [Ahmet Taha Erol](https://www.linkedin.com/in/ahmet-taha-erol)
-
-> *"Büyük hayatlar, küçük ama istikrarlı adımlarla kurulur."*
