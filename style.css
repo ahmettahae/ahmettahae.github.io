@@ -1,4 +1,4 @@
-/* --- GENEL TASARIM (Varsayılan: Dark Mode) --- */
+/*GENEL TASARIM*/
 :root {
     --bg-color: #181818;
     --card-bg: #242424;
@@ -12,7 +12,7 @@
     --header-height: 80px;
 }
 
-/* --- LIGHT MODE (Aydınlık Mod) --- */
+/*LIGHT MODE*/
 body.light-mode {
     --bg-color: #f0f2f5;
     --card-bg: #ffffff;
@@ -24,7 +24,7 @@ body.light-mode {
     --border-color: #ddd;
 }
 
-/* RTL (Arapça) Desteği */
+/*RTL (Arapça) Desteği*/
 body.rtl {
     direction: rtl;
     text-align: right;
@@ -52,7 +52,7 @@ body {
     min-height: 100vh;
 }
 
-/* --- BUTONLAR --- */
+/*BUTONLAR*/
 .btn {
     padding: 10px 20px;
     background-color: var(--pastel-blue);
@@ -95,7 +95,7 @@ body.light-mode .btn {
     color: var(--pastel-blue);
 }
 
-/* --- AUTH --- */
+/*AUTH*/
 #auth-wrapper {
     display: flex;
     justify-content: center;
@@ -119,7 +119,7 @@ body.light-mode .btn {
     text-align: center;
 }
 
-/* --- HEADER --- */
+/*HEADER*/
 header {
     background-color: var(--card-bg);
     padding: 0 3rem;
@@ -183,7 +183,7 @@ nav a.active {
     outline: none;
 }
 
-/* --- İÇERİK --- */
+/*İÇERİK*/
 #app-container {
     display: none;
     flex-direction: column;
@@ -199,7 +199,7 @@ nav a.active {
     flex: 1;
 }
 
-/* Motivasyon */
+/*Motivasyon*/
 .motivation-box {
     text-align: center;
     margin: 2rem 0;
@@ -216,7 +216,7 @@ nav a.active {
     color: var(--text-color);
 }
 
-/* --- GRAFİK ALANI --- */
+/*GRAFİK ALANI*/
 .charts-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -266,7 +266,7 @@ canvas {
     max-height: 200px;
 }
 
-/* --- XP ve RANK --- */
+/*XP ve RANK*/
 .xp-container {
     margin-bottom: 20px;
     text-align: left;
@@ -547,7 +547,7 @@ input[type=range]::-webkit-slider-runnable-track {
     object-fit: cover;
 }
 
-/* Profil (GENİŞLETİLMİŞ) */
+/*Profil*/
 .profile-wide-card {
     margin-top: 20px;
     width: 100%;
@@ -799,12 +799,11 @@ footer {
 .main-content {
     flex: 1;
     margin-left: 200px;
-    /* Sidebar genişliği kadar boşluk */
     padding: 2rem;
     max-width: 100%;
 }
 
-/* Sidebar Widgets */
+/* Sidebar Widget */
 .sidebar-widget {
     background-color: var(--input-bg);
     border-radius: 12px;
@@ -987,7 +986,7 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
 
-    /* Header Mobilde */
+    /* Header Mobil */
     header {
         height: auto;
         flex-direction: column;
@@ -1008,25 +1007,21 @@ footer {
         background-color: var(--input-bg);
     }
 
-    /* Ana Yapı Mobilde */
+    /* Ana Yapı Mobil */
     .main-content-wrapper {
         flex-direction: column;
     }
 
     #sidebar {
         display: block;
-        /* Mobilde artık görünür */
         position: static;
-        /* Sabit değil, akışta */
         width: 100%;
         border-right: none;
         border-top: 1px solid var(--border-color);
         order: 2;
-        /* İçeriğin altında görünsün */
         height: auto;
         overflow-y: visible;
         padding-bottom: 80px;
-        /* Footer payı */
     }
 
     .main-content {
@@ -1034,17 +1029,15 @@ footer {
         padding: 1rem;
         padding-top: 20px;
         order: 1;
-        /* İçerik üstte */
     }
 
-    /* Sidebar Widgetları Mobilde */
+    /* Sidebar Widgetları Mobil */
     .sidebar-widget {
         margin-bottom: 15px;
     }
 
     .sounds-grid {
         grid-template-columns: repeat(6, 1fr);
-        /* Ses butonları yatay tek sıra */
     }
 
     /* Yazılar ve Kartlar */
@@ -1060,8 +1053,125 @@ footer {
         padding: 15px;
     }
 
-    /* Pomodoro Mobilde Daha Kompakt */
     .pomodoro-widget .timer-display {
         font-size: 2rem;
     }
+}
+
+/*VALUE TRACKER*/
+.value-tracker {
+    margin: 20px 0;
+}
+
+.value-display {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.current-value {
+    color: var(--pastel-blue);
+}
+
+.separator {
+    color: var(--text-color);
+    opacity: 0.5;
+}
+
+.target-value {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.unit {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.6;
+    font-weight: normal;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+body.light-mode .progress-bar-container {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--pastel-blue), var(--pastel-green));
+    transition: width 0.3s ease;
+}
+
+.value-slider-container {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.value-slider {
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.value-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--pastel-blue);
+    cursor: pointer;
+    margin-top: -8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+}
+
+.value-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(168, 208, 230, 0.5);
+}
+
+.value-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: var(--border-color);
+    border-radius: 3px;
+}
+
+.value-slider::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: var(--pastel-blue);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s;
+}
+
+.value-slider::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(168, 208, 230, 0.5);
+}
+
+.value-slider::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: var(--border-color);
+    border-radius: 3px;
 }
