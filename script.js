@@ -8,29 +8,10 @@ const quotes = [
     "Dün bitti, anın tadını çıkar.",
     "Disiplin, özgürlüktür.",
     "Asla pes etme, mucizeler her gün olur.",
-    "Büyük başarılar, küçük adımlarla başlar.",
-    "Motivasyon seni başlatır, alışkanlık devam ettirir.",
-    "Ertelemek, zamanın hırsızıdır.",
-    "Hayallerin, bahanelerinden büyük olsun.",
-    "Yedi kez düş, sekiz kez kalk.",
-    "Bugün yapmadıkların, yarın pişmanlığın olur.",
-    "Değişim, konfor alanının sonunda başlar.",
-    "Zirveye giden yol, yokuş yukarıdır.",
-    "Yarın değil, şimdi.",
-    "Engeller, hedefe giden basamaklardır.",
-    "Sabır, acıdır ama meyvesi tatlıdır.",
-    "Başarı, pes etmeyenlerin ödülüdür.",
-    "Korkularının üzerine git, orada özgürlük var.",
-    "Zaman beklemez, sen de bekleme.",
-    "Yaptığın her şey, geleceğine bir yatırımdır.",
-    "Vazgeçtiğin an, kaybettiğin andır.",
-    "Karanlığa küfredeceğine bir mum yak.",
-    "En iyi manzara, en zor tırmanışın sonundadır.",
-    "Bugün ektiğini, yarın biçeceksin.",
-    "Kendine inan, gerisi gelir."
+    "Büyük başarılar, küçük adımlarla başlar."
 ];
 
-// --- DİL VERİTABANI ---
+//Dil 
 const translations = {
     tr: {
         nav_home: "Ana Sayfa", nav_gallery: "Galeri", nav_about: "Hakkında", nav_contact: "İletişim", nav_profile: "Profil", nav_logout: "Çıkış",
@@ -50,8 +31,12 @@ const translations = {
         rank_novice: "Acemi", rank_apprentice: "Gelişen", rank_skilled: "Deneyimli", rank_expert: "Uzman", rank_legend: "Efsane",
         next_rank: "Sonraki rütbeye:", xp_left: "XP kaldı", completed: "Tamamlanan", ongoing: "Devam Eden",
         chart_info_total: "Toplam", chart_info_completed: "tamamlandı", chart_info_rate: "Başarı Oranı", chart_info_focus: "En çok odaklandığın alan", chart_info_none: "Henüz veri yok.",
-        // HAKKINDA (TR)
-        about_title: "Kodların Ardındaki Hikaye",
+        goal_type: "Hedef Tipi", target_value: "Hedef Değer", custom_unit: "Birim Adı",
+        type_running: "Koşu", type_reading: "Kitap Okuma", type_travel: "Gezi", type_weight: "Kilo", type_water: "Su İçme",
+        type_study: "Ders Çalışma", type_meditation: "Meditasyon", type_gym: "Spor Salonu", type_language: "Dil Öğrenme",
+        type_movies: "Film İzleme", type_projects: "Proje", type_savings: "Para Biriktirme", type_steps: "Adım",
+        type_sleep: "Uyku", type_coding: "Kod Yazma", type_custom: "Özel",
+        about_title: "Kodların Ardındaki Hikâye",
         about_intro: "Merhaba, ben <strong>Ahmet Taha Erol</strong>.<br><br>Ankara Üniversitesi <strong>Bilgisayar Mühendisliği 3. sınıf öğrencisiyim</strong>. Hayatın yalnızca sınavlardan, ödevlerden ve not ortalamalarından ibaret olmadığına inananlardanım. Benim için asıl değerli olan; sabırla ilerlemek, istikrarlı büyümek ve her gün dünden biraz daha ileri gidebilmektir.<br><br>Bu platform, yalnızca bir web sitesi ya da sıradan bir proje değildir. Bu site; disiplinin, kararlılığın ve geleceği adım adım inşa etme arzusunun dijital bir yansımasıdır.",
         about_why_title: "Neden Bu Yola Çıktım?",
         about_why_text: "Zamanla şunu fark ettim: <strong>Gerçek başarı, büyük sıçramalarla değil; her gün atılan küçük ama kararlı adımlarla inşa ediliyor.</strong><br>Ancak insan zihni unutkandır. Harcanan emeği, uykusuz geceleri, vazgeçilmeyen hayalleri zamanla silikleştirir. İşte <strong>Goal Calendar</strong> tam olarak bu noktada doğdu: <em>Kendi gelişimimize şahitlik edebilmek için.</em>",
@@ -84,7 +69,11 @@ const translations = {
         rank_novice: "Novice", rank_apprentice: "Apprentice", rank_skilled: "Skilled", rank_expert: "Expert", rank_legend: "Legend",
         next_rank: "To next rank:", xp_left: "XP left", completed: "Completed", ongoing: "Ongoing",
         chart_info_total: "Total", chart_info_completed: "completed", chart_info_rate: "Success Rate", chart_info_focus: "Top focus area", chart_info_none: "No data yet.",
-        // ABOUT (EN)
+        goal_type: "Goal Type", target_value: "Target Value", custom_unit: "Unit Name",
+        type_running: "Running", type_reading: "Reading", type_travel: "Travel", type_weight: "Weight", type_water: "Water",
+        type_study: "Study", type_meditation: "Meditation", type_gym: "Gym", type_language: "Language Learning",
+        type_movies: "Movies", type_projects: "Projects", type_savings: "Savings", type_steps: "Steps",
+        type_sleep: "Sleep", type_coding: "Coding", type_custom: "Custom",
         about_title: "The Story Behind the Code",
         about_intro: "Hello, I am <strong>Ahmet Taha Erol</strong>.<br><br>I am a <strong>3rd-year Computer Engineering student at Ankara University</strong>. I believe life is more than just lecture notes and exams. What truly matters to me is progressing patiently, growing steadily, and going a little further every day than the day before.<br><br>This platform is not just a website or an ordinary project. It is a digital reflection of discipline, determination, and the desire to build the future step by step.",
         about_why_title: "Why Did I Set Out on This Path?",
@@ -118,7 +107,6 @@ const translations = {
         rank_novice: "Novice", rank_apprentice: "Apprenti", rank_skilled: "Compagnon", rank_expert: "Expert", rank_legend: "Légende",
         next_rank: "Prochain rang:", xp_left: "XP restants", completed: "Terminé", ongoing: "En cours",
         chart_info_total: "Total", chart_info_completed: "terminé", chart_info_rate: "Taux de Réussite", chart_info_focus: "Focus principal", chart_info_none: "Pas de données.",
-        // ABOUT (FR)
         about_title: "L'Histoire Derrière le Code",
         about_intro: "Bonjour, je suis <strong>Ahmet Taha Erol</strong>.<br><br>Je suis étudiant en <strong>3ème année de Génie Informatique à l'Université d'Ankara</strong>. Je crois que la vie ne se résume pas aux notes de cours et aux examens. Ce qui compte vraiment pour moi, c'est de progresser patiemment, de grandir régulièrement et d'aller un peu plus loin chaque jour.<br><br>Cette plateforme n'est pas juste un site web ou un projet ordinaire. C'est un reflet numérique de la discipline, de la détermination et du désir de construire l'avenir étape par étape.",
         about_why_title: "Pourquoi ai-je commencé ce chemin ?",
@@ -152,7 +140,6 @@ const translations = {
         rank_novice: "Neuling", rank_apprentice: "Lehrling", rank_skilled: "Geselle", rank_expert: "Experte", rank_legend: "Legende",
         next_rank: "Nächster Rang:", xp_left: "XP übrig", completed: "Abgeschlossen", ongoing: "Laufend",
         chart_info_total: "Gesamt", chart_info_completed: "abgeschlossen", chart_info_rate: "Erfolgsquote", chart_info_focus: "Hauptfokus", chart_info_none: "Keine Daten.",
-        // ABOUT (DE)
         about_title: "Die Geschichte hinter dem Code",
         about_intro: "Hallo, ich bin <strong>Ahmet Taha Erol</strong>.<br><br>Ich bin <strong>Student im 3. Jahr Computertechnik an der Universität Ankara</strong>. Ich glaube, dass das Leben mehr ist als nur Vorlesungsnotizen und Prüfungen. Was für mich wirklich zählt, ist geduldig voranzukommen, stetig zu wachsen und jeden Tag etwas weiter zu gehen als gestern.<br><br>Diese Plattform ist nicht nur eine Website oder ein gewöhnliches Projekt. Sie ist ein digitales Spiegelbild von Disziplin, Entschlossenheit und dem Wunsch, die Zukunft Schritt für Schritt aufzubauen.",
         about_why_title: "Warum habe ich diesen Weg eingeschlagen?",
@@ -186,7 +173,6 @@ const translations = {
         rank_novice: "Novato", rank_apprentice: "Aprendiz", rank_skilled: "Habilidoso", rank_expert: "Experto", rank_legend: "Leyenda",
         next_rank: "Siguiente rango:", xp_left: "XP restante", completed: "Completado", ongoing: "En curso",
         chart_info_total: "Total", chart_info_completed: "completado", chart_info_rate: "Tasa de Éxito", chart_info_focus: "Enfoque principal", chart_info_none: "Sin datos.",
-        // ABOUT (ES)
         about_title: "La Historia Detrás del Código",
         about_intro: "Hola, soy <strong>Ahmet Taha Erol</strong>.<br><br>Soy estudiante de <strong>3er año de Ingeniería Informática en la Universidad de Ankara</strong>. Soy de los que creen que la vida no se trata solo de apuntes de clase y exámenes. Lo que realmente importa para mí es progresar pacientemente, crecer constantemente e ir un poco más lejos cada día que ayer.<br><br>Esta plataforma no es solo un sitio web o un proyecto ordinario. Es un reflejo digital de la disciplina, la determinación y el deseo de construir el futuro paso a paso.",
         about_why_title: "¿Por qué emprendí este camino?",
@@ -220,7 +206,6 @@ const translations = {
         rank_novice: "مبتدئ", rank_apprentice: "متدرب", rank_skilled: "ماهر", rank_expert: "خبير", rank_legend: "أسطورة",
         next_rank: "الرتبة التالية:", xp_left: "XP متبقي", completed: "مكتمل", ongoing: "جاري",
         chart_info_total: "الإجمالي", chart_info_completed: "مكتمل", chart_info_rate: "نسبة النجاح", chart_info_focus: "التركيز الرئيسي", chart_info_none: "لا توجد بيانات.",
-        // ABOUT (AR)
         about_title: "القصة وراء الكود",
         about_intro: "مرحباً، أنا <strong>أحمد طه إيرول</strong>.<br><br>أنا <strong>طالب في السنة الثالثة هندسة كمبيوتر في جامعة أنقرة</strong>. أنا ممن يعتقدون أن الحياة أكثر من مجرد ملاحظات محاضرات وامتحانات. ما يهم حقاً بالنسبة لي هو التقدم بصبر، والنمو بثبات، والذهاب أبعد قليلاً كل يوم عن الأمس.<br><br>هذه المنصة ليست مجرد موقع ويب أو مشروع عادي. إنها انعكاس رقمي للانضباط والعزيمة والرغبة في بناء المستقبل خطوة بخطوة.",
         about_why_title: "لماذا انطلقت في هذا الطريق؟",
@@ -241,9 +226,28 @@ const translations = {
 const categoryColors = { 'Sağlık': '#2ecc71', 'Spor': '#3498db', 'Akademik': '#e74c3c', 'Eğlence': '#f1c40f', 'Kişisel': '' };
 const personalColors = ['#e67e22', '#9b59b6', '#1abc9c', '#e84393', '#34495e', '#7f8c8d', '#f39c12'];
 let selectedCustomColor = personalColors[0];
+
+const goalTypes = {
+    running: { unitTR: 'km', unitEN: 'km', unitFR: 'km', unitDE: 'km', unitES: 'km', unitAR: 'كم', step: 0.1 },
+    reading: { unitTR: 'sayfa', unitEN: 'pages', unitFR: 'pages', unitDE: 'Seiten', unitES: 'páginas', unitAR: 'صفحات', step: 1 },
+    travel: { unitTR: 'şehir', unitEN: 'cities', unitFR: 'villes', unitDE: 'Städte', unitES: 'ciudades', unitAR: 'مدن', step: 1 },
+    weight: { unitTR: 'kg', unitEN: 'kg', unitFR: 'kg', unitDE: 'kg', unitES: 'kg', unitAR: 'كغ', step: 0.1 },
+    water: { unitTR: 'litre', unitEN: 'liters', unitFR: 'litres', unitDE: 'Liter', unitES: 'litros', unitAR: 'لتر', step: 0.1 },
+    study: { unitTR: 'saat', unitEN: 'hours', unitFR: 'heures', unitDE: 'Stunden', unitES: 'horas', unitAR: 'ساعات', step: 0.5 },
+    meditation: { unitTR: 'dakika', unitEN: 'minutes', unitFR: 'minutes', unitDE: 'Minuten', unitES: 'minutos', unitAR: 'دقائق', step: 1 },
+    gym: { unitTR: 'gün', unitEN: 'days', unitFR: 'jours', unitDE: 'Tage', unitES: 'días', unitAR: 'أيام', step: 1 },
+    language: { unitTR: 'kelime', unitEN: 'words', unitFR: 'mots', unitDE: 'Wörter', unitES: 'palabras', unitAR: 'كلمات', step: 1 },
+    movies: { unitTR: 'film', unitEN: 'movies', unitFR: 'films', unitDE: 'Filme', unitES: 'películas', unitAR: 'أفلام', step: 1 },
+    projects: { unitTR: 'proje', unitEN: 'projects', unitFR: 'projets', unitDE: 'Projekte', unitES: 'proyectos', unitAR: 'مشاريع', step: 1 },
+    savings: { unitTR: '₺', unitEN: '₺', unitFR: '₺', unitDE: '₺', unitES: '₺', unitAR: '₺', step: 1 },
+    steps: { unitTR: 'adım', unitEN: 'steps', unitFR: 'pas', unitDE: 'Schritte', unitES: 'pasos', unitAR: 'خطوات', step: 100 },
+    sleep: { unitTR: 'saat', unitEN: 'hours', unitFR: 'heures', unitDE: 'Stunden', unitES: 'horas', unitAR: 'ساعات', step: 0.5 },
+    coding: { unitTR: 'satır', unitEN: 'lines', unitFR: 'lignes', unitDE: 'Zeilen', unitES: 'líneas', unitAR: 'أسطر', step: 10 },
+    custom: { unitTR: '', unitEN: '', unitFR: '', unitDE: '', unitES: '', unitAR: '', step: 1 }
+};
+
 let currentLang = 'tr';
 
-// --- DİL DEĞİŞTİRME FONKSİYONU ---
 function changeLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('lang', lang);
@@ -266,7 +270,6 @@ function changeLanguage(lang) {
     renderGallery();
 }
 
-// --- AUTH ---
 document.getElementById('register-form').addEventListener('submit', function (e) {
     e.preventDefault();
     const u = document.getElementById('reg-username').value;
@@ -321,7 +324,7 @@ function loginSuccess(user) {
     document.getElementById('languageSelector').value = savedLang;
     changeLanguage(savedLang);
 
-    renderSidebar(); // TRIGGER SIDEBAR UPDATE
+    renderSidebar();
     initColorPicker();
 }
 
@@ -354,13 +357,30 @@ function checkCategoryColor() {
     document.getElementById('custom-color-div').classList.toggle('hidden', cat !== 'Kişisel');
 }
 
-// --- CONTACT FORM HANDLER ---
+function updateGoalTypeUI() {
+    const goalType = document.getElementById('goal-type').value;
+    const customUnitDiv = document.getElementById('custom-unit-div');
+    if (goalType === 'custom') {
+        customUnitDiv.classList.remove('hidden');
+    } else {
+        customUnitDiv.classList.add('hidden');
+    }
+}
+
+function getGoalUnit(goalType, customUnit) {
+    if (goalType === 'custom') {
+        return customUnit || 'birim';
+    }
+    const unitKey = 'unit' + currentLang.toUpperCase();
+    return goalTypes[goalType] ? goalTypes[goalType][unitKey] : '';
+}
+
+
 document.getElementById('contact-form')?.addEventListener('submit', function (e) {
     e.preventDefault();
     const subject = document.getElementById('contact-subject').value;
     const message = document.getElementById('contact-message').value;
 
-    // Simüle edilmiş gönderim
     setTimeout(() => {
         alert(translations[currentLang].message_sent);
         e.target.reset();
@@ -374,6 +394,10 @@ document.getElementById('add-goal-form').addEventListener('submit', function (e)
     let finalColor = categoryColors[category];
     if (category === 'Kişisel') finalColor = selectedCustomColor;
 
+    const goalType = document.getElementById('goal-type').value;
+    const targetValue = parseFloat(document.getElementById('target-value').value);
+    const customUnit = document.getElementById('custom-unit').value;
+
     const newGoal = {
         id: Date.now(),
         title: document.getElementById('goal-title').value,
@@ -381,6 +405,11 @@ document.getElementById('add-goal-form').addEventListener('submit', function (e)
         duration: document.getElementById('goal-duration').value,
         color: finalColor,
         desc: document.getElementById('goal-desc').value,
+        goalType: goalType,
+        targetValue: targetValue,
+        currentValue: 0,
+        customUnit: customUnit,
+        unit: getGoalUnit(goalType, customUnit),
         progress: 0
     };
     currentUser.goals.push(newGoal);
@@ -390,6 +419,7 @@ document.getElementById('add-goal-form').addEventListener('submit', function (e)
     closeModal('goal-modal');
     e.target.reset();
     checkCategoryColor();
+    updateGoalTypeUI();
 });
 
 document.getElementById('add-photo-form').addEventListener('submit', function (e) {
@@ -434,7 +464,25 @@ function renderGoals() {
     });
 
     filteredGoals.forEach(goal => {
-        const isCompleted = parseInt(goal.progress) === 100;
+
+        if (!goal.goalType) {
+            goal.goalType = 'custom';
+            goal.targetValue = 100;
+            goal.currentValue = goal.progress || 0;
+            goal.customUnit = '%';
+            goal.unit = '%';
+        }
+
+        if (typeof goal.currentValue === 'undefined') goal.currentValue = 0;
+        if (typeof goal.targetValue === 'undefined') goal.targetValue = 100;
+
+        if (goal.goalType !== 'custom') {
+            goal.unit = getGoalUnit(goal.goalType, goal.customUnit);
+        }
+
+        goal.progress = goal.targetValue > 0 ? Math.min(100, (goal.currentValue / goal.targetValue) * 100) : 0;
+
+        const isCompleted = goal.currentValue >= goal.targetValue;
         const div = document.createElement('div');
         div.className = 'goal-card' + (isCompleted ? ' completed' : '');
         const goalColor = goal.color || '#95a5a6';
@@ -447,15 +495,27 @@ function renderGoals() {
         if (goal.category === "Eğlence") displayCat = t.cat_fun;
         if (goal.category === "Kişisel") displayCat = t.cat_personal;
 
+        const stepValue = goalTypes[goal.goalType] ? goalTypes[goal.goalType].step : 1;
+
         div.innerHTML = `
             <div class="goal-header">
                 <span class="goal-title">${goal.title}</span>
                 <span class="goal-category" style="background-color:${goalColor}">${displayCat}</span>
             </div>
             <p style="font-size:0.9rem;color:var(--text-color); opacity:0.8; min-height:40px;">${goal.desc}</p>
-            <div class="slider-container">
-                <div class="slider-label"><span>${t.progress}</span><span id="p-${goal.id}">%${goal.progress}</span></div>
-                <input type="range" min="0" max="100" value="${goal.progress}" oninput="updateGoal(${goal.id}, this.value)">
+            <div class="value-tracker">
+                <div class="value-display">
+                    <span class="current-value" id="current-${goal.id}">${goal.currentValue}</span>
+                    <span class="separator">/</span>
+                    <span class="target-value">${goal.targetValue}</span>
+                    <span class="unit">${goal.unit}</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="progress-bar-${goal.id}" style="width: ${goal.progress}%"></div>
+                </div>
+                <div class="value-slider-container">
+                    <input type="range" class="value-slider" id="slider-${goal.id}" min="0" max="${goal.targetValue}" step="${stepValue}" value="${goal.currentValue}" oninput="updateGoalValue(${goal.id}, this.value)">
+                </div>
             </div>
             <button class="delete-btn" onclick="deleteGoal(${goal.id})">${t.delete}</button>
         `;
@@ -465,40 +525,62 @@ function renderGoals() {
     });
 }
 
-function updateGoal(id, val) {
-    document.getElementById(`p-${id}`).innerText = `%${val}`;
+function updateGoalValue(id, newValue) {
     const g = currentUser.goals.find(x => x.id === id);
+    if (!g) return;
 
-    if (g) {
-        const wasCompleted = parseInt(g.progress) === 100;
-        const isCompleted = parseInt(val) === 100;
+    newValue = parseFloat(newValue);
+    if (isNaN(newValue)) newValue = 0;
 
-        if (!wasCompleted && isCompleted) {
-            currentUser.xp = (currentUser.xp || 0) + 20;
-            showCelebration(g.color || '#b8e994');
-        } else if (wasCompleted && !isCompleted) {
-            currentUser.xp = Math.max(0, (currentUser.xp || 0) - 20);
-        }
+    const wasCompleted = g.currentValue >= g.targetValue;
 
-        g.progress = val;
-        saveUser();
+    g.currentValue = Math.min(newValue, g.targetValue * 2); 
+    g.progress = g.targetValue > 0 ? Math.min(100, (g.currentValue / g.targetValue) * 100) : 0;
 
-        if (isCompleted || wasCompleted) {
-            setTimeout(() => {
-                renderGoals();
-                updateCharts();
-                renderProfile();
-            }, 500);
-        }
+    const isCompleted = g.currentValue >= g.targetValue;
+
+    if (!wasCompleted && isCompleted) {
+        currentUser.xp = (currentUser.xp || 0) + 20;
+        showCelebration(g.color || '#b8e994');
+    } else if (wasCompleted && !isCompleted) {
+        currentUser.xp = Math.max(0, (currentUser.xp || 0) - 20);
+    }
+
+    saveUser();
+
+    document.getElementById(`current-${id}`).innerText = g.currentValue;
+    document.getElementById(`progress-bar-${id}`).style.width = `${g.progress}%`;
+    const sliderEl = document.getElementById(`slider-${id}`);
+    if (sliderEl) sliderEl.value = g.currentValue;
+
+    if (isCompleted || wasCompleted) {
+        setTimeout(() => {
+            renderGoals();
+            updateCharts();
+            renderProfile();
+        }, 500);
+    } else {
+        updateCharts();
     }
 }
 
-document.addEventListener('change', function (e) {
-    if (e.target.type === 'range') {
-        updateCharts();
-        if (e.target.value < 100) renderGoals();
-    }
-});
+function incrementGoalValue(id, step) {
+    const g = currentUser.goals.find(x => x.id === id);
+    if (!g) return;
+    const newValue = g.currentValue + step;
+    updateGoalValue(id, newValue);
+}
+
+function decrementGoalValue(id, step) {
+    const g = currentUser.goals.find(x => x.id === id);
+    if (!g) return;
+    const newValue = Math.max(0, g.currentValue - step);
+    updateGoalValue(id, newValue);
+}
+
+function updateGoal(id, val) {
+    updateGoalValue(id, val);
+}
 
 function showCelebration(color) {
     const overlay = document.getElementById('celebration-overlay');
@@ -636,7 +718,7 @@ function renderProfile() {
     document.getElementById('xp-bar').style.width = `${percentage}%`;
     document.getElementById('next-rank-text').innerText = `${t.next_rank} ${rankInfo.next - xp} ${t.xp_left}`;
 
-    renderSidebar(); // Added sidebar update
+    renderSidebar(); 
 }
 
 function renderGallery() {
@@ -669,16 +751,14 @@ function renderGallery() {
     });
 }
 
-// Ensure timer initializes with input value
 document.getElementById('pomodoro-duration')?.addEventListener('change', function () {
-    resetPomodoro(); // Update display immediately when input changes
+    resetPomodoro(); 
 });
 
-// --- PROCEDURAL FOCUS SOUNDS MANAGER (UPDATED) ---
-// Using Web Audio API to synthesize sounds (No external files)
+
 
 let audioCtx = null;
-const activeNodes = {}; // Store { type: { nodes: [], gain: GainNode } }
+const activeNodes = {}; 
 const bufferCache = {};
 
 function initAudioContext() {
@@ -690,12 +770,11 @@ function initAudioContext() {
     }
 }
 
-// 1. Noise Generator Helper (White, Pink, Brown)
 function createNoiseBuffer(type) {
     if (!audioCtx) return null;
     if (bufferCache[type]) return bufferCache[type];
 
-    const bufferSize = audioCtx.sampleRate * 2; // 2 seconds buffer
+    const bufferSize = audioCtx.sampleRate * 2; 
     const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
     const output = buffer.getChannelData(0);
 
@@ -706,20 +785,19 @@ function createNoiseBuffer(type) {
             output[i] = white;
         } else if (type === 'pink') {
             const b0 = 0.99886 * (lastOut || 0) + white * 0.0555179;
-            output[i] = b0 * 3.5; // Gain compensation
+            output[i] = b0 * 3.5; 
             lastOut = b0;
         } else if (type === 'brown') {
             const brown = (lastOut || 0) + (0.02 * white) / 1.02;
             output[i] = brown * 3.5;
             lastOut = brown;
-            output[i] /= 3.5; // Normalize rough
+            output[i] /= 3.5;
         }
     }
     bufferCache[type] = buffer;
     return buffer;
 }
 
-// 2. Sound Generators (UPDATED with Library and Forest)
 const generators = {
     white_noise: (ctx) => {
         const source = ctx.createBufferSource();
@@ -732,7 +810,6 @@ const generators = {
         return { nodes: [source, gain], mainGain: gain };
     },
     rain: (ctx) => {
-        // Classic rain sound using Pink noise and light LowPass
         const source = ctx.createBufferSource();
         source.buffer = createNoiseBuffer('pink');
         source.loop = true;
@@ -746,7 +823,6 @@ const generators = {
         return { nodes: [source, filter, gain], mainGain: gain };
     },
     ocean: (ctx) => {
-        // Deep Brown Noise for relaxing, deep ambient waves
         const source = ctx.createBufferSource();
         source.buffer = createNoiseBuffer('brown');
         source.loop = true;
@@ -768,7 +844,6 @@ const generators = {
         return { nodes: [source, gain, lfo, lfoGain], mainGain: gain };
     },
     fireplace: (ctx) => {
-        // Calm Ambience / Fireplace rumble
         const source = ctx.createBufferSource();
         source.buffer = createNoiseBuffer('pink');
         source.loop = true;
@@ -782,16 +857,14 @@ const generators = {
         return { nodes: [source, filter, gain], mainGain: gain };
     },
 
-    // YENİ EKLENEN SES: KÜTÜPHANE
     library: (ctx) => {
-        // Human murmur simulation with Bandpass Pink Noise
         const source = ctx.createBufferSource();
         source.buffer = createNoiseBuffer('pink');
         source.loop = true;
 
         const filter = ctx.createBiquadFilter();
         filter.type = 'bandpass';
-        filter.frequency.value = 550; // Focus on mid-range human speech frequencies
+        filter.frequency.value = 550;
         filter.Q.value = 0.5;
 
         const gain = ctx.createGain();
@@ -802,11 +875,9 @@ const generators = {
         return { nodes: [source, filter, gain], mainGain: gain };
     },
 
-    // YENİ EKLENEN SES: ORMAN
     forest: (ctx) => {
         const nodes = [];
 
-        // 1. Wind (HighPass Pink Noise)
         const windSrc = ctx.createBufferSource();
         windSrc.buffer = createNoiseBuffer('pink');
         windSrc.loop = true;
@@ -819,7 +890,6 @@ const generators = {
         windSrc.start();
         nodes.push(windSrc, windFilter, windGain);
 
-        // 2. Birds/Insects (Tremolo Sine Wave)
         const osc = ctx.createOscillator();
         osc.type = 'sine';
         osc.frequency.value = 4000;
@@ -835,7 +905,6 @@ const generators = {
 
         return { nodes: nodes, mainGain: windGain };
     },
-    // The previous `cafe` generator has been implicitly removed if you replaced the whole object.
 };
 
 function toggleSound(type) {
@@ -843,9 +912,7 @@ function toggleSound(type) {
     const btn = document.querySelector(`button[onclick="toggleSound('${type}')"]`);
 
     if (activeNodes[type]) {
-        // Stop
         const entry = activeNodes[type];
-        // Ramp down
         if (entry.mainGain) {
             entry.mainGain.gain.setTargetAtTime(0, audioCtx.currentTime, 0.1);
         }
@@ -858,10 +925,8 @@ function toggleSound(type) {
             btn.classList.remove('active');
         }, 200);
     } else {
-        // Start
         if (generators[type]) {
             const entry = generators[type](audioCtx);
-            // Ramp up
             if (entry.mainGain) {
                 const val = entry.mainGain.gain.value;
                 entry.mainGain.gain.setValueAtTime(0, audioCtx.currentTime);
@@ -923,11 +988,11 @@ function toggleForm(type) {
     if (type === 'register') {
         loginForm.classList.add('hidden');
         registerForm.classList.remove('hidden');
-        formTitle.textContent = t.register; // Assuming you have a form-title in HTML
+        formTitle.textContent = t.register;
     } else {
         registerForm.classList.add('hidden');
         loginForm.classList.remove('hidden');
-        formTitle.textContent = "Goal Calendar"; // Or t.login if preferred
+        formTitle.textContent = "Goal Calendar";
     }
 }
 
@@ -947,7 +1012,6 @@ function logout() {
 
 window.onclick = e => { if (e.target.classList.contains('modal-overlay')) e.target.style.display = 'none'; }
 
-// --- OTO-LOGIN ---
 const sess = sessionStorage.getItem('currentUser');
 if (sess) {
     const u = JSON.parse(sess);
@@ -962,11 +1026,9 @@ else {
     }
 }
 
-// --- SIDEBAR & POMODORO LOGIC ---
 function renderSidebar() {
     if (!currentUser) return;
 
-    // Update Profile Widget
     var nameEl = document.getElementById('sb-username');
     var rankEl = document.getElementById('sb-rank');
     var avatarEl = document.getElementById('sb-avatar');
@@ -975,12 +1037,10 @@ function renderSidebar() {
 
     if (nameEl) nameEl.textContent = currentUser.username;
 
-    // Rank calculation and display (Simplified for demo)
     const rankInfo = getRankInfo(currentUser.xp || 0);
     if (rankEl) rankEl.textContent = rankInfo.rank;
-    currentUser.rank = rankInfo.rank; // Update user object if needed elsewhere
+    currentUser.rank = rankInfo.rank;
 
-    // Initials for Avatar
     var uName = currentUser.name || '';
     var uSurname = currentUser.surname || '';
     if (avatarEl && (uName || uSurname)) {
@@ -989,9 +1049,7 @@ function renderSidebar() {
         avatarEl.textContent = initials;
     }
 
-    // XP Bar
     if (xpBarEl && xpTextEl) {
-        // Calculate percentage for sidebar bar (simplified 1000 XP max for display)
         var percent = Math.min((currentUser.xp / 1000) * 100, 100);
         xpBarEl.style.width = percent + "%";
         xpTextEl.textContent = (currentUser.xp || 0) + " XP";
@@ -999,7 +1057,7 @@ function renderSidebar() {
 }
 
 let pomodoroInterval;
-let pomodoroTime = 25 * 60; // 25 minutes
+let pomodoroTime = 25 * 60;
 let isPomodoroRunning = false;
 let defaultPomodoroTime = 25 * 60;
 
@@ -1008,7 +1066,6 @@ function updateTimerDisplay() {
     const seconds = pomodoroTime % 60;
     const timerEl = document.getElementById('pomodoro-timer');
     if (timerEl) {
-        // Only update text content if not currently focused (editing)
         if (document.activeElement !== timerEl) {
             timerEl.innerText = (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
         }
@@ -1018,7 +1075,6 @@ function updateTimerDisplay() {
 function startPomodoro() {
     if (isPomodoroRunning) return;
 
-    // Auto Switch to Dark Mode
     if (document.body.classList.contains('light-mode')) {
         toggleTheme();
     }
@@ -1027,7 +1083,7 @@ function startPomodoro() {
     document.getElementById('btn-start').disabled = true;
 
     const timerEl = document.getElementById('pomodoro-timer');
-    timerEl.contentEditable = "false"; // Disable editing while running
+    timerEl.contentEditable = "false";
 
     const statusEl = document.getElementById('pomodoro-status');
     statusEl.textContent = "Odaklanıyor...";
@@ -1057,7 +1113,6 @@ function pausePomodoro() {
     isPomodoroRunning = false;
     document.getElementById('btn-start').disabled = false;
 
-    // Allow edit on pause
     document.getElementById('pomodoro-timer').contentEditable = "true";
 
     const statusEl = document.getElementById('pomodoro-status');
@@ -1079,7 +1134,6 @@ function resetPomodoro() {
     document.getElementById('pomodoro-status').textContent = "Odaklan!";
 }
 
-// Inline Editing Logic
 document.addEventListener('DOMContentLoaded', () => {
     const timerEl = document.getElementById('pomodoro-timer');
 
@@ -1092,9 +1146,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         timerEl.addEventListener('blur', () => {
-            // Parse logic
             let text = timerEl.innerText.trim();
-            // Support formats: "25", "25:00", "25.00"
             text = text.replace('.', ':');
 
             let minutes = 25;
@@ -1108,29 +1160,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 minutes = parseInt(text) || 25;
             }
 
-            // Cap limits
             if (minutes > 180) minutes = 180;
             if (minutes < 1) minutes = 1;
 
             pomodoroTime = (minutes * 60) + seconds;
-            defaultPomodoroTime = pomodoroTime; // Remember this as the new base
-
-            updateTimerDisplay(); // Re-format cleanly
+            defaultPomodoroTime = pomodoroTime;
+            updateTimerDisplay();
         });
     }
 });
-// --- EKSİK OLAN FONKSİYON ---
+
 function openAddPhotoModal() {
     const s = document.getElementById('photo-goal-select');
     s.innerHTML = "";
 
-    // Eğer hiç hedef yoksa uyarı ver
     if (!currentUser.goals || currentUser.goals.length === 0) {
         alert("Galeriye fotoğraf eklemek için önce en az bir 'Hedef' oluşturmalısın!");
         return;
     }
 
-    // Hedefleri listeye doldur
     currentUser.goals.forEach(g => {
         const o = document.createElement('option');
         o.value = g.title;
@@ -1140,5 +1188,3 @@ function openAddPhotoModal() {
 
     openModal('photo-modal');
 }
-
-
