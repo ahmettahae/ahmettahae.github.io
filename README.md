@@ -54,3 +54,5 @@ Bu proje statik bir web uygulamasıdır. Herhangi bir sunucu kurulumu, veritaban
 **Geliştirici:** Ahmet Taha Erol
 **E-posta:** ahmettahae@gmail.com
 **LinkedIn:** [Ahmet Taha Erol](https://www.linkedin.com/in/ahmet-taha-erol)
+**Tanıtım Videosu:** https://youtu.be/-8KMgAR6nCQ
+  
