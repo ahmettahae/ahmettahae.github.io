@@ -305,7 +305,6 @@
                         </a>
                     </div>
 
-                    <!-- Blog Style Contact Form -->
                     <div class="goal-card" style="margin-top: 30px;">
                         <h3 style="color: var(--pastel-blue); margin-bottom: 20px;" data-translate="write_to_me">Bana
                             Yazın
@@ -421,6 +420,32 @@
                     <label data-translate="select_color">Renk Seçiniz:</label>
                     <div class="color-options" id="color-picker-container"></div>
                 </div>
+                <div class="form-group"><label data-translate="goal_type">Hedef Tipi</label>
+                    <select id="goal-type" onchange="updateGoalTypeUI()">
+                        <option value="running" data-translate="type_running">Koşu</option>
+                        <option value="reading" data-translate="type_reading">Kitap Okuma</option>
+                        <option value="travel" data-translate="type_travel">Gezi</option>
+                        <option value="weight" data-translate="type_weight">Kilo</option>
+                        <option value="water" data-translate="type_water">Su İçme</option>
+                        <option value="study" data-translate="type_study">Ders Çalışma</option>
+                        <option value="meditation" data-translate="type_meditation">Meditasyon</option>
+                        <option value="gym" data-translate="type_gym">Spor Salonu</option>
+                        <option value="language" data-translate="type_language">Dil Öğrenme</option>
+                        <option value="movies" data-translate="type_movies">Film İzleme</option>
+                        <option value="projects" data-translate="type_projects">Proje</option>
+                        <option value="savings" data-translate="type_savings">Para Biriktirme</option>
+                        <option value="steps" data-translate="type_steps">Adım</option>
+                        <option value="sleep" data-translate="type_sleep">Uyku</option>
+                        <option value="coding" data-translate="type_coding">Kod Yazma</option>
+                        <option value="custom" data-translate="type_custom">Özel</option>
+                    </select>
+                </div>
+                <div id="custom-unit-div" class="form-group hidden">
+                    <label data-translate="custom_unit">Birim Adı</label>
+                    <input type="text" id="custom-unit" placeholder="ör: video, makale, vb.">
+                </div>
+                <div class="form-group"><label data-translate="target_value">Hedef Değer</label><input type="number"
+                        id="target-value" min="0.1" step="0.1" required placeholder="ör: 100"></div>
                 <div class="form-group"><label data-translate="duration">Süre</label>
                     <select id="goal-duration">
                         <option value="Günlük" data-translate="daily">Günlük</option>
